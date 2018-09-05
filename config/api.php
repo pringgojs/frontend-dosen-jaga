@@ -13,5 +13,5 @@ return [
     |
     */
 
-    'url' => env('API_URL','http://support.mis.pens.ac.id/tracer-study/api'),
+    'url' => env('API_URL','http://localhost/client/polipangkep/api/public/api'),
 ];

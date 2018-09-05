@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use Ixudra\Curl\Facades\Curl;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -45,7 +46,15 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        \Log::info($request->input());
-        return $request->input('username');
+        $url = config('api.url').'/login';
+        \Log::info($url);
+        $response = Curl::to($url)
+        ->withData($request->toArray())
+        ->post();
+        $response = json_decode($response);
+        if ($response->status == 200) {
+            \Log::info($response->status);
+        }
+        // return $response;
     }
 }
