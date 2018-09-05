@@ -67,6 +67,7 @@ class LoginController extends Controller
         return response()->json(
             [
                 'status' => 1,
+                'url' => url($response->type)
             ]
         );
     }

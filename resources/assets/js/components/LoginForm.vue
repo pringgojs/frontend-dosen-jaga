@@ -84,13 +84,14 @@ export default {
                 
                 if (resp.data.status ==1) {
                     swal('Selamat datang, Anda berhasil masuk');
+                    window.location.href = resp.data.url;
+                    return true;
                 }
-                console.log(resp);                
+
+                swal('Data tidak ditemukan, silahkan coba lagi.');
             })
             .catch(function (resp) {
-                console.log(resp);                
-
-                alert("oops, something went wrong. Please try again!");
+                swal("oops, something went wrong. Please try again!");
             });
         },
         validate() {
