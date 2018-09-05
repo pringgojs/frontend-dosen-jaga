@@ -46,7 +46,7 @@ export default {
             isStudentFormActive: true,
             label: 'Nomer Induk Mahasiswa (NIM)',
             data: {
-                type: 'dosen',
+                type: 'mahasiswa',
                 username: '',
                 password: ''
             }

@@ -47,14 +47,27 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $url = config('api.url').'/login';
-        \Log::info($url);
         $response = Curl::to($url)
-        ->withData($request->toArray())
-        ->post();
+            ->withData($request->toArray())
+            ->post();
         $response = json_decode($response);
-        if ($response->status == 200) {
-            \Log::info($response->status);
+        
+        if ($response->status != 1) {
+            return response()->json(
+                [
+                    'status' => 0,
+                ]
+		    );
         }
-        // return $response;
+        
+        \Session::set( 'type', $response->type);
+        \Session::set( 'username', $request->input('username') );
+        \Session::set( 'name', $response->data->nama );
+
+        return response()->json(
+            [
+                'status' => 1,
+            ]
+        );
     }
 }
