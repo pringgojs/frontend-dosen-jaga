@@ -11,6 +11,8 @@
 |
 */
 
+Route::post('login', 'Auth\LoginController@login');
+Route::get('login', 'Auth\LoginController@showLoginForm');
 Route::get('/', function () {
     return view('layouts.app');
 });

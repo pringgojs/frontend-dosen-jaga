@@ -22,29 +22,7 @@
 
 <body>
 	<div id="preloader"></div>
-{{-- 
-	<div class="color-switcher">
-		<div class="open"><span class="ti-settings"></span></div>
-		<h4>PATTERENS</h4>
-		<ul>
-			<li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><img alt="" src="assets/css/colors/img/pattern2.png"></a> </li>
-			<li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><img alt="" src="assets/css/colors/img/pattern-3.jpg"></a> </li>
-			<li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><img alt="" src="assets/css/colors/img/pattern-4.jpg"></a> </li>
-			
-		</ul>
-
-		<h4 class="clr-2">COLORS</h4>
-		<ul class="colr">
-			<li><a class="color-5 active" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><span class="ti-control-stop"></span></a> </li>
-			<li><a class="color-6" onclick="setActiveStyleSheet('color-6'); return false;" href="#"><span class="ti-control-stop"></span></a> </li>
-			<li><a class="color-7" onclick="setActiveStyleSheet('color-7'); return false;" href="#"><span class="ti-control-stop"></span></a> </li>
-			<li><a class="color-8" onclick="setActiveStyleSheet('color-8'); return false;" href="#"><span class="ti-control-stop"></span></a> </li>
-			<li><a class="color-9" onclick="setActiveStyleSheet('color-9'); return false;" href="#"><span class="ti-control-stop"></span></a> </li>
-			<li><a class="color-1" onclick="setActiveStyleSheet('color-1'); return false;" href="#"><span class="ti-control-stop"></span></a> </li>
-		</ul>
-	</div> --}}
-
-
+	
 	<!-- Start of vCard content
 	============================================= -->
 	<section id="vcard-area" class="vcard-area-section">
