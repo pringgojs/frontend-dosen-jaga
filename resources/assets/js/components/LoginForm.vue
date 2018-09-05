@@ -79,16 +79,17 @@ export default {
                 return true;
             }
 
-            console.log(this.data.type);
             var data = this.data;
             axios.post('login', data).then(function (resp) {
-                // if (resp.data.kuesioner == 0) {
-                //     app.is_finish = true;
-                //     return true;
-                // }
+                
+                if (resp.data.status ==1) {
+                    swal('Selamat datang, Anda berhasil masuk');
+                }
                 console.log(resp);                
             })
             .catch(function (resp) {
+                console.log(resp);                
+
                 alert("oops, something went wrong. Please try again!");
             });
         },

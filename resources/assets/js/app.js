@@ -9,8 +9,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import VueRouter from 'vue-router';
+import swal from 'sweetalert'
 
-window.Vue.use(VueRouter);
+window.Vue.use(VueRouter, swal);
 
 import LoginForm from './components/LoginForm.vue';
 
