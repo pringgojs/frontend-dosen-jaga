@@ -16,7 +16,7 @@
                         <input type="password" v-model="data.password" id="password" name="password" class="form-control input-lg">
                     </div>
                     <div class="form-group">
-                        <p>Anda {{data.type}} ? <a @click="toggleForm()"> Masuk sebagai {{data.type}}</a></p>
+                        <p>Anda {{labelBy}} ? <a @click="toggleForm()"> Masuk sebagai {{labelBy}}</a></p>
                     </div>
                     <div class="form-group">
                         <div class="row">
@@ -45,6 +45,7 @@ export default {
             errors: [],
             isStudentFormActive: true,
             label: 'Nomer Induk Mahasiswa (NIM)',
+            labelBy: 'dosen',
             data: {
                 type: 'mahasiswa',
                 username: '',
@@ -58,13 +59,15 @@ export default {
             if (app.isStudentFormActive) {
                 app.label = 'Username';
                 app.isStudentFormActive = false;
-                app.data.type = 'mahasiswa';
+                app.data.type = 'dosen';
+                app.labelBy = 'mahasiswa';
                 return true;
             }
             
             app.label = 'Nomer Induk Mahasiswa (NIM)';
             app.isStudentFormActive = true;
-            app.data.type = 'dosen';
+            app.data.type = 'mahasiswa';
+            app.labelBy = 'dosen';
             
         },
         login() {
@@ -76,6 +79,7 @@ export default {
                 return true;
             }
 
+            console.log(this.data.type);
             var data = this.data;
             axios.post('login', data).then(function (resp) {
                 // if (resp.data.kuesioner == 0) {

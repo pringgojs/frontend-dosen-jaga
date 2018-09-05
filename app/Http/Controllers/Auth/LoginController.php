@@ -52,7 +52,7 @@ class LoginController extends Controller
             ->post();
         $response = json_decode($response);
         
-        if ($response->status != 1) {
+        if ($response->status == 0) {
             return response()->json(
                 [
                     'status' => 0,
