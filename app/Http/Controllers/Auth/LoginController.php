@@ -71,4 +71,13 @@ class LoginController extends Controller
             ]
         );
     }
+
+    function checkAuth()
+    {
+        if (session('type')) {
+            return redirect(session('type'));
+        }
+
+        return redirect('login');
+    }
 }

@@ -10,9 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'student', 'middleware' => 'role:student'], function () {
+    Route::get('/', 'StudentController@index');
+});
+
+Route::group(['prefix' => 'lecturer', 'middleware' => 'role:lecturer'], function () {
+    Route::get('/', 'LecturerController@index');
+});
 
 Route::post('login', 'Auth\LoginController@login');
 Route::get('login', 'Auth\LoginController@showLoginForm');
-Route::get('/', function () {
-    return view('layouts.app');
-});
+Route::get('/', 'Auth\LoginController@checkAuth');
