@@ -21,6 +21,7 @@ import Materi from './components/lecturer/Materi.vue';
 import Faq from './components/lecturer/Faq.vue';
 
 // all component
+Vue.component('example', require('./components/Example.vue'));
 Vue.component('login', require('./components/LoginForm.vue'));
 Vue.component('beranda', require('./components/lecturer/Beranda.vue'));
 Vue.component('e-tugas', require('./components/lecturer/ETugas.vue'));
@@ -36,27 +37,32 @@ const routes = [{
     {
         path: '/beranda',
         component: Beranda,
-        name: 'beranda'
+        name: 'beranda',
+        meta: { title: 'Beranda - Dosen Jaga'}
     },
     {
         path: '/e-tugas',
         component: ETugas,
-        name: 'e-tugas'
+        name: 'e-tugas',
+        meta: { title: 'E-Tugas - Dosen Jaga'}
     },
     {
         path: '/materi',
         component: Materi,
-        name: 'materi'
+        name: 'materi',
+        meta: { title: 'Materi - Dosen Jaga'}
     },
     {
         path: '/jadwal',
         component: Jadwal,
-        name: 'jadwal'
+        name: 'jadwal',
+        meta: { title: 'Jadwal - Dosen Jaga'}
     },
     {
         path: '/faq',
         component: Faq,
-        name: 'faq'
+        name: 'faq',
+        meta: { title: 'FAQ - Dosen Jaga'}
     }
 ]
 
@@ -64,6 +70,11 @@ const router = new VueRouter({
     routes
 })
 
+// Add title in header
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title
+    next()
+})
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -71,7 +82,6 @@ const router = new VueRouter({
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
     router
