@@ -14,16 +14,50 @@ import swal from 'sweetalert'
 window.Vue.use(VueRouter, swal);
 
 import LoginForm from './components/LoginForm.vue';
+import Beranda from './components/lecturer/Beranda.vue';
+import ETugas from './components/lecturer/ETugas.vue';
+import Jadwal from './components/lecturer/Jadwal.vue';
+import Materi from './components/lecturer/Materi.vue';
+import Faq from './components/lecturer/Faq.vue';
 
 // all component
 Vue.component('login', require('./components/LoginForm.vue'));
+Vue.component('beranda', require('./components/lecturer/Beranda.vue'));
+Vue.component('e-tugas', require('./components/lecturer/ETugas.vue'));
+Vue.component('jadwal', require('./components/lecturer/Jadwal.vue'));
+Vue.component('materi', require('./components/lecturer/Materi.vue'));
+Vue.component('faq', require('./components/lecturer/Faq.vue'));
 
 const routes = [{
         path: '/login',
         component: LoginForm,
         name: 'login'
     },
-    // { path: '/admin/companies/edit/:id', component: CompaniesEdit, name: 'editCompany' },
+    {
+        path: '/beranda',
+        component: Beranda,
+        name: 'beranda'
+    },
+    {
+        path: '/e-tugas',
+        component: ETugas,
+        name: 'e-tugas'
+    },
+    {
+        path: '/materi',
+        component: Materi,
+        name: 'materi'
+    },
+    {
+        path: '/jadwal',
+        component: Jadwal,
+        name: 'jadwal'
+    },
+    {
+        path: '/faq',
+        component: Faq,
+        name: 'faq'
+    }
 ]
 
 const router = new VueRouter({

@@ -2,11 +2,11 @@
 					<div class="left-menubar">
 						<div class="navigation-bar box-shadow-code ul-li text-center">	
 							<ul class="menu-item ul-li-block">
-								<li><a href="#"><span class="ti-receipt"></span>Beranda</a></li>
-								<li><a href="#"><span class="ti-pencil-alt"></span>E-tugas</a></li>
-								<li><a href="#"><span class="ti-file"></span>Materi</a></li>
-								<li><a href="#"><span class="ti-layout-grid2"></span>Jadwal</a></li>
-								<li><a href="#"><span class="ti-comment-alt"></span>FAQ</a></li>
+								<li><router-link to="/beranda"><span class="ti-receipt"></span>Beranda</router-link></li>
+								<li><router-link to="/e-tugas"><span class="ti-pencil-alt"></span>E-tugas</router-link></li>
+								<li><router-link to="/materi"><span class="ti-file"></span>Materi</router-link></li>
+								<li><router-link to="/jadwal"><span class="ti-layout-grid2"></span>Jadwal</router-link></li>
+								<li><router-link to="/faq"><span class="ti-comment-alt"></span>FAQ</router-link></li>
 							</ul>
 						</div>
 					</div>
@@ -35,7 +35,7 @@
 							<div class="profile-details">
 								<div class="profile-img-details box-shadow-code text-center pt60">
 									<div class="profile-img mb15">
-										<img src="{{asset('public/img/male.png')}}" alt="pro-pic">
+										<img src="public/img/male.png" alt="pro-pic">
 										<div class="download-cv">
 											<a href="#"><span class="green ti-import"></span></a>	
 										</div>
@@ -69,7 +69,7 @@
 						<div class="profile-details">
 							<div class="profile-img-details box-shadow-code text-center pt60">
 								<div class="profile-img mb15">
-									<img src="{{asset('public/img/male.png')}}" alt="pro-pic">
+									<img src="public/img/male.png" alt="pro-pic">
 									<div class="download-cv">
 										<a href="#"><span class="green ti-import"></span></a>	
 									</div>

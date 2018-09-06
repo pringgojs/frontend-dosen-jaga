@@ -8,6 +8,6 @@ class LecturerController extends Controller
 {
     public function index()
     {
-        dd('Lecturer');
+        return view('lecturer.index');
     }
 }

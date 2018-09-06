@@ -1720,13 +1720,13 @@ switchOpen: function (){
 pageAscensor: function (){
 	var ascensor = $('#vcard-ascensor').ascensor({
 		height: "100%",
-		ascensorFloorName:["about-me", "resume", "portfolio" , "blog" , "contact"], direction: [[0,1],[0,2],[0,3],[0,4],[0,5],[0,6]]});
+		ascensorFloorName:["beranda", "e-tugas", "materi" , "jadwal" , "faq"], direction: [[0,1],[0,2],[0,3],[0,4],[0,5],[0,6]]});
 	var ascensorInstance = $('#vcard-ascensor').data('ascensor');
 	var floorAdded = false;
 
-	$(".menu-item  li").on("click", function(event, index) {
-		ascensorInstance.scrollToFloor($(this).index());
-	});
+	// $(".menu-item  li").on("click", function(event, index) {
+	// 	ascensorInstance.scrollToFloor($(this).index());
+	// });
 
 	$(".menu-item  li:eq("+ ascensor.data("current-floor") +")").addClass("selected");
 
