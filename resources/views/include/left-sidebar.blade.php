@@ -87,10 +87,10 @@
 								<!-- /pro-text -->
 								<div class="pro-social ul-li">
 									<ul class="social-list ul-li">
-										<li><a href="#"><span class="ti-facebook"></span></a></li>
+										{{-- <li><a href="#"><span class="ti-facebook"></span></a></li>
 										<li><a href="#"><span class="ti-twitter-alt"></span></a></li>
 										<li><a href="#"><span class="ti-google"></span></a></li>
-										<li><a href="#"><span class="ti-instagram"></span></a></li>
+										<li><a href="#"><span class="ti-instagram"></span></a></li> --}}
 									</ul>
 								</div>
 							</div>

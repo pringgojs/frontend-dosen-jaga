@@ -26,7 +26,6 @@ elixir((mix) => {
         '../theme/css/lightbox.css',
         '../theme/css/style.css',
         '../theme/css/responsive.css',
-        '../theme/css/snackbar.css',
         '../theme/css/custom.css',
         '../theme/css/colors/switch.css',
     ], 'public/css');
@@ -43,7 +42,6 @@ elixir((mix) => {
         '../theme/js/owl.carousel.min.js',
         '../theme/js/switch.js',
         '../theme/js/script.js',
-        '../theme/js/snackbar.js',
         '../theme/js/function.js',
     ], 'public/js');
 });
