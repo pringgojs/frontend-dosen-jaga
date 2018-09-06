@@ -4,7 +4,7 @@
         <div class="section-content">
             <div class="section-title pb30">
                 <h2>Beranda</h2>
-                <content-loader></content-loader>
+                <content-loader height=300></content-loader>
             </div>
         </div>
     </div>

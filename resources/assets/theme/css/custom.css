@@ -1,3 +1,4 @@
+/* sweetalert */
 .swal-modal {
     border-radius: 0px !important;
 }
@@ -24,4 +25,14 @@
 }
 .swal-button:focus {
     box-shadow: none;
+}
+
+/* theme */
+.profile-img-details {
+    /* float: none; */
+    /* margin-left: 143px; */
+}
+
+.navigation-bar {
+    /* width: 142px */
 }

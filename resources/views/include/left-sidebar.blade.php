@@ -46,7 +46,7 @@
 										<span class=designation>UX/UI Designer</span>
 									</div>
 									<!-- /pro-name -->
-									<div class="pro-text mb50">
+									<div class="pro-text mb50 scroll-out">
 										<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt ebdmollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
 									</div>
 									<!-- /pro-text -->
@@ -76,12 +76,13 @@
 								</div>
 								<!-- /img -->
 								<div class="pro-name pb35">
-									<span class=name>Pringgo Juni S</span>
-									<span class=designation>Teknik Informatika</span>
+									<span class=name>{{$lecturer->nama}}</span>
+									<span class=designation>{{$lecturer->nip}}</span> <br>
+									
 								</div>
 								<!-- /pro-name -->
-								<div class="pro-text mb50">
-									<p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt ebdmollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
+								<div class="pro-text mb50  scroll-out">
+									<span class="badge">{{$program_study->jurusan}}</span>
 								</div>
 								<!-- /pro-text -->
 								<div class="pro-social ul-li">

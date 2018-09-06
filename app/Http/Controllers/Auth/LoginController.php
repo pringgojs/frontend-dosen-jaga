@@ -59,10 +59,11 @@ class LoginController extends Controller
                 ]
 		    );
         }
-        
+
         \Session::set( 'type', $response->type);
         \Session::set( 'username', $request->input('username') );
-        \Session::set( 'name', $response->data->nama );
+        \Session::set( 'name', $response->data->nama);
+        \Session::set( 'id', $response->data->nomor);
 
         return response()->json(
             [
